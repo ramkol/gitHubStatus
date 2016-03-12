@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="root" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub Status</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</head>
+
+<body>
+    <div >
+        <div ng-controller="gitHubCtrl">
+            <h1>{{"Current status: " + status}}</h1>
+            <h1>Availability:</h1>
+            <div ng-repeat="message in messages">
+                {{message.timeFrame+ ": " + message.status + ": "+message.body}}
+           </div>
+    </div>
+</body>
+</html>
